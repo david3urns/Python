@@ -33,26 +33,16 @@ def cent_banner(banner_title):
 
     #creates box 1/4 the width of the screen
     banner_width = columns // 4
-    print("Banner width will be " + str(banner_width))
+    #print("Banner width will be " + str(banner_width))
     if (banner_width % 2) == 0:
         banner_width = banner_width
     else:
         banner_width = banner_width + 1
 
-    #do math to center the banner_title text based on a fixed width
-    # banner_mid_space = 50 - title_len
-    # banner_mid_space_half = banner_mid_space // 2
-    # banner_mid_spaces = banner_mid_space_half * " "
-
-    #do math to center the banner_title text based on the terminal width 
+    #do math to center the banner_title text based on the terminal width
     banner_mid_space = banner_width - title_len
     banner_mid_space_half = banner_mid_space // 2
     banner_mid_spaces = banner_mid_space_half * " "
-
-    #creates the actual box based on a fixed number
-    # banner_top = top_left_corner + horz_border * 50 + top_right_corner
-    # banner_mid = vert_border + banner_mid_spaces +  banner_title + banner_mid_spaces + vert_border
-    # banner_bot = bot_left_corner + horz_border * 50 + bot_right_corner
 
     #creates the actual box based on the terminal width
     banner_top = top_left_corner + horz_border * banner_width + top_right_corner
@@ -71,4 +61,3 @@ def cent_banner(banner_title):
     print()
 
 cent_banner("Test")
-cent_banner("Odd")
